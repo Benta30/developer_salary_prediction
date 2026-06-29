@@ -1,0 +1,21 @@
+# not pushing data, has large datasets - means data will be pushed but cleaned and raw wont be pushed.
+/data/cleaned
+/data/raw
+
+#venv
+/devSalaryVenv
+
+#environment variables
+.env
+
+# manifest file
+
+#streamlit secrets
+
+.streamlit/secrets.toml
+
+
+#models
+# models/
+# *.pkl
+# *.model

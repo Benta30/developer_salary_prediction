@@ -1,0 +1,58 @@
+<html>
+<head> <title> Salary predictor </title></head>
+<body>
+    <h1> Developer salary predictor</h1>
+    <form method ="POST" action="/predict">
+        <label> Country: </label><br>
+        <select name = "country">
+            <option>United States of America</option>
+            <option>Germany</option>
+            <option>United Kingdom of Great Britain and Northern Ireland</option>
+            <option>India</option>
+            <option>Other</option>
+        </select>
+
+        <label> Years of experience </label><br>
+        <input type="number" name="years" value="5" min="0" max="40">
+        <br><br>
+
+        <label> Education level: </label><br>
+        <select name="education"> 
+            <option>Bachelor's</option>
+            <option>Master's</option>
+            <option>PhD</option>
+            <option>Associate's</option>
+            <option>Some college</option>
+            <option>High School</option>
+            <option>No formal eduction</option>
+            <option>Other</option>
+        </select>
+        <br><br>
+
+        <label> Employment type: </label><br>
+        <select name="employment"> 
+            <option>Full-time</option>
+            <option>Part-time</option>
+            <option>Freelance/Self-employed</option>
+            <option>Student</option>
+            <option>Other</option>
+        </select>
+        <br><br>
+
+        <label> Number of programming Languages used: </label>
+        <input type="number" name="languages" value="4" min="1" max="20">
+        <br><br>
+        </select>
+
+
+        <button type="submit"> Predict salary </button> <!--- wen the button is clicked it pushes everything to predict -->
+    </form>
+
+        {% if salary %} <!-- this is a loop syntax -->
+            <hr> <!-- add a line-->
+            <h2> Predicted salary: $ {{salary}} </h2>
+        {% endif %}
+</body>
+</html>
+
+<! -- the html must be in the templates folder
